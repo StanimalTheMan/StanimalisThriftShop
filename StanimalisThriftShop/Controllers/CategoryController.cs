@@ -1,12 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using StanimalisThriftShop.Data;
+using StanimalisThriftShop.Models;
 
-namespace StanimalisThriftShop.Controllers
+namespace StanimalisThriftShop.Controllers;
+
+public class CategoryController : Controller
 {
-	public class CategoryController : Controller
-	{
-		public IActionResult Index()
-		{
-			return View();
-		}
-	}
+    private readonly ApplicationDbContext _db;
+    public CategoryController(ApplicationDbContext db)
+    {
+        _db = db;
+    }
+    public IActionResult Index()
+    {
+        List<Category> objCategoryList = _db.Categories.ToList();
+        return View(objCategoryList);
+    }
 }
