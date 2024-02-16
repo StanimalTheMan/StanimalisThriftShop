@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StanimalisThriftShop", "StanimalisThriftShop\StanimalisThriftShop.csproj", "{936AC6DB-6394-4C21-8A4C-19607AE09A2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StanimalisThriftShopRazor_Temp", "StanimalisThriftShopRazor_Temp\StanimalisThriftShopRazor_Temp.csproj", "{A15FB65A-A1A3-4300-A6E4-599D0D2CB92D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StanimalisThriftShopRazor_Temp", "StanimalisThriftShopRazor_Temp\StanimalisThriftShopRazor_Temp.csproj", "{A15FB65A-A1A3-4300-A6E4-599D0D2CB92D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
