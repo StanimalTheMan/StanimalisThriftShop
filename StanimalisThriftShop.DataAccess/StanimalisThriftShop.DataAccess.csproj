@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StanimalisThriftShop.Models\StanimalisThriftShop.Models.csproj" />
+    <ProjectReference Include="..\StanimalisThriftShop.Utility\StanimalisThriftShop.Utility.csproj" />
   </ItemGroup>
 
 </Project>
