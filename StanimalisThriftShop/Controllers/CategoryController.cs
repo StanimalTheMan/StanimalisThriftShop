@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using StanimalisThriftShop.Data;
+using StanimalisThriftShop.DataAccess.Data;
 using StanimalisThriftShop.Models;
 
 namespace StanimalisThriftShop.Controllers;

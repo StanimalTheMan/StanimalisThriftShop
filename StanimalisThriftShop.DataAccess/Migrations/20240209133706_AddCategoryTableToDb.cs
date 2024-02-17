@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace StanimalisThriftShop.Migrations
+namespace StanimalisThriftShop.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddCategoryTableToDb : Migration

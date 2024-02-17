@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using StanimalisThriftShop.Data;
+using StanimalisThriftShop.DataAccess.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

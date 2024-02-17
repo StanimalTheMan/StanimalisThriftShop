@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StanimalisThriftShop.Models;
 
-namespace StanimalisThriftShop.Data;
+namespace StanimalisThriftShop.DataAccess.Data;
 
 public class ApplicationDbContext : DbContext
 {
