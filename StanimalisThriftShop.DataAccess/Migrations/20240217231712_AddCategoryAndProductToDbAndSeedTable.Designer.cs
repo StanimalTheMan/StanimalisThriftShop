@@ -11,8 +11,8 @@ using StanimalisThriftShop.DataAccess.Data;
 namespace StanimalisThriftShop.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240217175810_AddCategoryToDbAndSeedTable")]
-    partial class AddCategoryToDbAndSeedTable
+    [Migration("20240217231712_AddCategoryAndProductToDbAndSeedTable")]
+    partial class AddCategoryAndProductToDbAndSeedTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,6 +62,46 @@ namespace StanimalisThriftShop.DataAccess.Migrations
                             Id = 3,
                             DisplayOrder = 3,
                             Name = "Collectibles"
+                        });
+                });
+
+            modelBuilder.Entity("StanimalisThriftShop.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("ListPrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "From a Mets game giveaway.",
+                            ListPrice = 25.0,
+                            Name = "Francisco Lindor Gnome"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Zack Wheeler signed my baseball in 2017 after his return from Tommy John",
+                            ListPrice = 179.0,
+                            Name = "Zack Wheeler Autographed Baseball LGM"
                         });
                 });
 #pragma warning restore 612, 618
