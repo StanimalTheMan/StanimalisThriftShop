@@ -16,6 +16,17 @@ public class ProductRepository : Repository<Product>, IProductRepository
 
 	public void Update(Product obj)
 	{
-		_db.Products.Update(obj);
+		var objFromDb = _db.Products.FirstOrDefault(u => u.Id == obj.Id);
+		if(objFromDb != null)
+		{
+			objFromDb.Name = obj.Name;
+			objFromDb.ListPrice = obj.ListPrice;
+			objFromDb.Description = obj.Description;
+			objFromDb.CategoryId = obj.CategoryId;
+			if (obj.ImageUrl != null)
+			{
+				objFromDb.ImageUrl = obj.ImageUrl;
+			}
+		}
 	}
 }
