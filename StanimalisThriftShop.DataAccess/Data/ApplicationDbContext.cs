@@ -27,7 +27,8 @@ public class ApplicationDbContext : DbContext
                 Name = "Francisco Lindor Gnome",
                 Description = "From a Mets game giveaway.",
                 ListPrice = 25,
-                CategoryId = 3
+                CategoryId = 3,
+                ImageUrl=""
             },
             new Product
             {
@@ -35,7 +36,8 @@ public class ApplicationDbContext : DbContext
                 Name = "Zack Wheeler Autographed Baseball LGM",
                 Description = "Zack Wheeler signed my baseball in 2017 after his return from Tommy John",
                 ListPrice = 179,
-                CategoryId = 3
+                CategoryId = 3,
+                ImageUrl=""
             });
     }
 }
