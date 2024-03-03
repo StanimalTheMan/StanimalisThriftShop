@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using StanimalisThriftShop.DataAccess.Repository.IRepository;
 using StanimalisThriftShop.Models;
+using StanimalisThriftShop.Utility;
 
 namespace StanimalisThriftShop.Areas.Admin.Controllers;
 [Area("Admin")]
+[Authorize(Roles = SD.Role_Admin)]
 public class CategoryController : Controller
 {
     private readonly IUnitOfWork _unitOfWork;

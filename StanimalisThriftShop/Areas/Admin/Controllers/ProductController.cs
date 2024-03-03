@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using StanimalisThriftShop.DataAccess.Repository.IRepository;
 using StanimalisThriftShop.Models;
 using StanimalisThriftShop.Models.ViewModels;
+using StanimalisThriftShop.Utility;
 
 namespace StanimalisThriftShop.Areas.Admin.Controllers;
 [Area("Admin")]
+[Authorize(Roles = SD.Role_Admin)]
 public class ProductController : Controller
 {
 	private readonly IUnitOfWork _unitOfWork;
